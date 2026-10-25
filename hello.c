@@ -1,17 +1,24 @@
-// check number is even or odd 
+// check given number is prime number
 # include<stdio.h>
 
 int main() {
-    int n;
+    int n,i;
     printf("enter the number which you want to check :");
     scanf("%d",&n);
-    if(n%2==0){
-        printf("given number is a even number");
+    if(n<=1)
+    printf("not a prime number");
+    else
+    for(int i=2;i<n;i++){
+        if(n%i==0){
+             break;
+        }
+    }
+    if(i==n){
+        printf("number is a prime number");
     }
     
     else{
-        printf("given number is a odd number");
+        printf("not a prime number");
     }
-    
     return 0;
 }
